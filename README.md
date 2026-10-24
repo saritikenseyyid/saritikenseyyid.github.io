@@ -139,7 +139,7 @@ Das linke Burgermenü öffnet einen nativen modalen Dialog. Es ist unabhängig v
 
 ## Technischer Aufbau der Suche
 
-`_plugins/search_index.rb` erstellt `search.json` nach dem Rendern. Dadurch sind auch eingebundene Markdown-Texte vollständig durchsuchbar. Das Plugin nutzt nur Rubys Standardbibliothek. Veröffentliche diese Version mit dem mitgelieferten GitHub-Actions-Workflow, damit das Plugin ausgeführt wird. Mit `search: false` im Kopfbereich einer Seite kannst du sie aus der Suche nehmen.
+`search.json` wird direkt durch Jekylls Vorlagensprache erzeugt, ohne eigene Plugins. Das funktioniert sowohl im GitHub-Pages-Standardbuild als auch im enthaltenen Actions-Workflow. Markdown-Beiträge und normale Markdown-Seiten erscheinen automatisch. Für Seiten, deren Text vollständig aus einer eingebundenen Datei stammt, kann `search_include: home/ueber.md` im Kopfbereich dieselbe Inhaltsdatei für die Suche verwenden. Mit `search: false` schließt du eine Seite aus.
 
 ## Prüfstand dieser Lieferung
 

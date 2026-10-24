@@ -2,6 +2,7 @@
 title: Über mich
 description: Ein paar Worte zu der Person hinter diesem Wiki.
 permalink: /ueber/
+search_include: home/ueber.md
 ---
 {% include home/ueber.md %}
 
