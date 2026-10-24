@@ -1,0 +1,5 @@
+<p class="eyebrow">Entdecken</p>
+<nav aria-label="{{ include.label | default: 'Hauptnavigation' }}">
+{% for item in site.data.navigation %}<a href="{{ item.url | relative_url }}"><span>{{ item.number }}</span>{{ item.title | escape }}</a>{% endfor %}
+</nav>
+<div class="side-note"><i>Ein Wiki im Werden.</i><br>Manche Gedanken sind fertig.<br>Die meisten wachsen noch.</div>

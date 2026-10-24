@@ -1,0 +1,4 @@
+---
+layout: default
+---
+<article id="start"><header class="intro"><div class="eyebrow"><span class="dot"></span>Persönliches Wiki</div><h1>{{ page.title | escape }}</h1>{% if page.description %}<p class="lead">{{ page.description | escape }}</p>{% endif %}</header><details class="mobile-toc"><summary>Leseeinstellungen</summary><div class="settings" data-settings></div></details><div class="article-content">{{ content }}</div>{% include footer.html %}</article>

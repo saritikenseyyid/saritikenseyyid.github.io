@@ -1,0 +1,37 @@
+title: "Dein Name"
+description: "Ein persönliches Wiki über Ideen, Projekte und die Dinge dazwischen."
+lang: de
+timezone: Europe/Berlin
+url: "https://saritikenseyyid.github.io"
+# Leer bei username.github.io; für eine lokale Repository-Vorschau z.B. /mein-wiki.
+# Der mitgelieferte GitHub-Workflow setzt den Unterpfad automatisch.
+baseurl: ""
+permalink: /notizen/:title/
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+future: false
+strict_front_matter: true
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      kind: "Notiz"
+  - scope:
+      path: ""
+    values:
+      layout: page
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - scripts
+  - node_modules
+  - .bundle
+  - .github

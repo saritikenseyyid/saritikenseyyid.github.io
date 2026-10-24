@@ -1,0 +1,12 @@
+- title: Dieses persönliche Wiki
+  description: Eine eigene Heimat für Gedanken, unabhängig von Plattformen.
+  url: /#start
+  category: Digitaler Garten
+- title: Ein öffentliches Notizbuch
+  description: Kurze Texte über Gestaltung, Neugier und das Lernen unterwegs.
+  url: /#notizen
+  category: Textsammlung
+- title: Raum für das Nächste
+  description: Eine offene Stelle für eine Idee, die noch einen Anfang sucht.
+  url: /#aktuell
+  category: In Entwicklung
