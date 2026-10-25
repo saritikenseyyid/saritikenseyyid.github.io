@@ -61,3 +61,7 @@ Die drei Zitate werden aus `_data/quotes.yml` geladen. `text` und `author` sind 
 ## Quotes als Bilder
 
 `/quotes/` ist eine reduzierte Poster-Galerie. Die Poster liegen in `assets/images/quote-*.jpg`; Metadaten und Bildpfade in `_data/quotes.yml`. Für weitere Poster einen Datensatz ergänzen und in `assets/js/main.js` den zugehörigen `poster_id` in `posterAssets` aufnehmen, damit die Großansicht das Bild findet. Die Originale wurden mit dem integrierten Imagegen-Werkzeug erzeugt.
+
+## Beitragsarchiv
+
+`/posts/` listet automatisch alle veröffentlichten Markdown-Posts, neueste zuerst. Die Suche durchsucht Titel, Beschreibung und Volltext; Thema und Jahr lassen sich kombinieren. Sortierung nach neuestem/ältestem Datum oder Titel, Trefferzahl, Leerzustand und Zurücksetzen sind enthalten. Suchzustände werden ohne Neuladen als URL-Parameter gespeichert. Ohne JavaScript bleiben alle Postlinks lesbar. Die Logik liegt in `assets/js/archive.js`, die Vorlage in `posts.html`.

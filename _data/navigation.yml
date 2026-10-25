@@ -1,18 +1,21 @@
 - title: Startseite
   url: /
   number: "⌂"
-- title: Über mich
-  url: /#ueber
+- title: About
+  url: /about-preview/
   number: "01"
-- title: Projekte
-  url: /#projekte
+- title: Thoughts
+  url: /posts/
   number: "02"
-- title: Notizen & Gedanken
-  url: /#notizen
+- title: Experiments
+  url: /#projects
   number: "03"
-- title: Was mich beschäftigt
-  url: /#aktuell
+- title: Now
+  url: /#now
   number: "04"
-- title: Kontakt
-  url: /#kontakt
+- title: Quotes
+  url: /quotes/
   number: "05"
+- title: Say hello
+  url: /#contact
+  number: "↗"

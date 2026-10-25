@@ -1,0 +1,22 @@
+---
+layout: default
+title: Thoughts Archive
+description: Alle Gedanken an einem Ort. Durchsuche Texte und entdecke Beiträge nach Thema oder Jahr.
+permalink: /posts/
+---
+<section class="post-archive wrap" aria-labelledby="archive-title" data-post-archive>
+<header class="archive-heading"><div><div class="section-label mono">THE OPEN NOTEBOOK / INDEX</div><h1 id="archive-title">Thoughts,<br><em>on record.</em><span aria-hidden="true">*</span></h1></div><div class="archive-heading-note"><p>Alle Gedanken an einem Ort.<br>Zum Stöbern, Suchen und Weiterdenken.</p><span class="mono">{{ site.posts.size }} EINTRÄGE · ALWAYS IN PROGRESS.</span></div></header>
+<form class="archive-controls" role="search" aria-label="Beiträge durchsuchen" data-archive-form>
+<div class="archive-search"><label for="archive-search" class="mono">SUCHEN IM OFFENEN NOTIZBUCH</label><div class="archive-search-field"><span aria-hidden="true">↗</span><input type="search" id="archive-search" name="q" placeholder="Ein Wort, ein Thema, ein Gedanke …" autocomplete="off" aria-controls="archive-entries"></div><p class="mono archive-search-help">Sucht in Titeln, Beschreibungen und vollständigen Texten.</p></div>
+<div class="archive-filter"><label for="archive-topic" class="mono">THEMA</label><select id="archive-topic" name="topic" aria-controls="archive-entries"><option value="">Alle Themen</option>{% assign topics = site.posts | map: 'category' | compact | uniq | sort %}{% for topic in topics %}<option value="{{ topic | escape }}">{{ topic | escape }}</option>{% endfor %}</select></div>
+<div class="archive-filter"><label for="archive-year" class="mono">JAHR</label><select id="archive-year" name="year" aria-controls="archive-entries"><option value="">Alle Jahre</option>{% assign year_groups = site.posts | group_by_exp: 'post', "post.date | date: '%Y'" %}{% for group in year_groups %}<option value="{{ group.name }}">{{ group.name }}</option>{% endfor %}</select></div>
+<div class="archive-filter"><label for="archive-sort" class="mono">REIHENFOLGE</label><select id="archive-sort" name="sort" aria-controls="archive-entries"><option value="newest">Neueste zuerst</option><option value="oldest">Älteste zuerst</option><option value="title">Titel A–Z</option></select></div>
+</form>
+<div class="archive-results-bar"><p class="mono" role="status" aria-live="polite" aria-atomic="true" id="archive-count">{{ site.posts.size }} Beiträge</p><button class="archive-reset mono" type="button" data-archive-reset>Zurücksetzen ↺</button></div>
+<div id="archive-entries" class="archive-entries">{% for post in site.posts %}{% assign words = post.content | strip_html | number_of_words %}{% assign minutes = words | plus: 199 | divided_by: 200 %}
+<article class="archive-entry" data-archive-entry data-title="{{ post.title | escape }}" data-date="{{ post.date | date: '%Y-%m-%d' }}" data-year="{{ post.date | date: '%Y' }}" data-topic="{{ post.category | escape }}" data-search="{{ post.title | append: ' ' | append: post.description | append: ' ' | append: post.content | markdownify | strip_html | normalize_whitespace | escape }}">
+<a href="{{ post.url | relative_url }}" class="archive-entry-link"><time class="mono archive-entry-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d.%m.%Y' }}</time><div class="archive-entry-copy"><h2>{{ post.title | escape }}</h2><p>{{ post.description | escape }}</p><div class="archive-entry-meta mono"><span>{{ post.category | default: 'FIELD NOTES' | escape }}</span><span>{{ minutes | at_least: 1 }} MIN READ{% if post.editorial_draft %} · GEDANKENSKIZZE{% endif %}</span></div></div><span class="archive-entry-arrow" aria-hidden="true">↗</span></a>
+</article>{% endfor %}</div>
+<div class="archive-empty" id="archive-empty" hidden><span aria-hidden="true">∅</span><h2>No dots connected. Yet.</h2><p>Für diese Suche gibt es noch keinen Beitrag.<br>Versuch ein anderes Wort oder lockere die Filter.</p><button type="button" class="text-link" data-archive-reset>Alle Beiträge zeigen ↗</button></div>
+<noscript><p class="archive-no-js">Alle Beiträge stehen unten zur Verfügung. Für Textsuche und Filter bitte JavaScript aktivieren.</p></noscript>
+</section>

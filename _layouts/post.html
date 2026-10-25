@@ -2,7 +2,7 @@
 layout: default
 ---
 <article class="post-shell wrap section-space">
-<a class="text-link" href="{{ '/#thoughts' | relative_url }}">← Zum offenen Notizbuch</a>
+<a class="text-link" href="{{ '/posts/' | relative_url }}">← Zum Archiv</a>
 <header class="post-heading"><div class="section-label mono">{{ page.category | escape }} / THINKING OUT LOUD</div><h1>{{ page.title | escape }}</h1><div class="post-meta mono"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%d.%m.%Y' }}</time> · {{ site.data.profile.name | escape }}{% if page.editorial_draft %} · GEDANKENSKIZZE{% endif %}</div></header>
 <div class="post-prose">{{ content }}</div>
 <nav class="post-navigation" aria-label="Weitere Gedanken">{% if page.previous %}<a class="text-link" href="{{ page.previous.url | relative_url }}">← {{ page.previous.title | escape }}</a>{% endif %}{% if page.next %}<a class="text-link" href="{{ page.next.url | relative_url }}">{{ page.next.title | escape }} →</a>{% endif %}</nav>
