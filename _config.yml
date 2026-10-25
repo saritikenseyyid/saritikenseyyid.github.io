@@ -1,5 +1,5 @@
-title: "Dein Name"
-description: "Ein persönliches Wiki über Ideen, Projekte und die Dinge dazwischen."
+title: "Seyyid"
+description: "Ein offenes Notizbuch über Kunst, Technologie, Business, Investing und die Menschen dazwischen."
 lang: de
 timezone: Europe/Berlin
 url: "https://saritikenseyyid.github.io"
@@ -35,3 +35,4 @@ exclude:
   - node_modules
   - .bundle
   - .github
+  - DESIGN-REVIEW.md

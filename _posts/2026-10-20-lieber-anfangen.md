@@ -1,18 +1,20 @@
 ---
-title: "Lieber anfangen als fertig sein"
-description: "Warum unfertige Dinge einen Platz verdienen."
-tags: [Schreiben, Lernen]
-example: true
+layout: post
+title: "Die spannendste Frage an KI ist eine menschliche."
+description: "Was wollen wir mit den Möglichkeiten eigentlich anfangen?"
+category: "TECHNOLOGY & PEOPLE"
+slug: ki-und-menschen
+editorial_draft: true
 ---
 
-## Der unsichtbare Weg
+Was kann das Modell? Diese Frage lässt sich messen, vergleichen und in einer Tabelle beantworten. Was wollen wir damit anfangen? Diese Frage bleibt erstaunlich oft liegen.
 
-Wir sehen meistens nur die fertigen Dinge. Den veröffentlichten Text, das gestaltete Objekt, die schlüssige Idee. Der Weg dorthin bleibt unsichtbar.
+Mich interessiert Technologie dort, wo sie auf Menschen trifft. Auf ihre Gewohnheiten, ihre Ängste, ihren Alltag. Ein Werkzeug kann beeindruckend sein und trotzdem am eigentlichen Problem vorbeigehen.
 
-Dabei ist gerade der Zwischenstand interessant. Er zeigt, wo Fragen offen sind und wo jemand noch sucht.
+Wenn die Herstellung einfacher wird, verschiebt sich die Arbeit. Wir müssen genauer entscheiden, was es wert ist, hergestellt zu werden. Was verdient Aufmerksamkeit? Was ist eine gute Erfahrung? Wer profitiert davon?
 
-> Unfertig ist auch ein Zustand, den man teilen kann.
+Dazu braucht es technisches Verständnis. Aber auch Urteil, Vorstellungskraft und die Fähigkeit zuzuhören. Ein Prototyp ist dann besonders wertvoll, wenn er eine Annahme sichtbar macht, über die wir vorher nur gesprochen haben.
 
-## Ein guter Absatz heute
+Ich möchte mit diesen Werkzeugen spielen, ohne ihren Zweck aus den Augen zu verlieren. Kunst kann dabei helfen: Sie stellt Fragen, die in einer Anforderungsliste selten vorkommen.
 
-Dieses Wiki darf wachsen. Ein guter Absatz heute ist mir lieber als der perfekte Artikel, der nie entsteht.
+Die offene Frage: Welche menschliche Fähigkeit möchte ich mit einem Werkzeug eigentlich stärken?

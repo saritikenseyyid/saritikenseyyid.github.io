@@ -1,151 +1,55 @@
-# Dein persönliches Wiki — Jekyll
+# Seyyid — A curious work in progress.
 
-Das bestehende, flache Wiki-Design mit gemeinsamem Menü, Suche und Leseeinstellungen. Beiträge schreibst du als Markdown. Du brauchst kein zusätzliches Theme.
+Persönliches Jekyll-Zine mit gemischter deutscher/englischer Sprache. Papier, Schwarz, Signalrot, Xerox-Poster und ein offenes Notizbuch über Kunst, Technologie, Business, Investing und Community.
 
-## Einmal auf GitHub einrichten
+## Inhalt bearbeiten
 
-1. Entpacke das Quellpaket und kopiere **den gesamten Inhalt** des Ordners in dein Repository. `_config.yml`, `Gemfile` und `index.md` müssen im obersten Verzeichnis liegen. Auch `.github/workflows/pages.yml` muss mit hochgeladen werden; manche Dateiansichten verstecken Ordner mit einem Punkt am Anfang.
-2. Wenn du die alte HTML-Version im selben Repository ersetzt: Die alte `index.html`, `beitrag.html` und deren andere lose Dateien durch dieses Paket ersetzen. Insbesondere dürfen nicht `index.html` und `index.md` parallel die Startseite erzeugen. Dieses Paket enthält bereits eine neue `beitrag.html` als Weiterleitung für den alten Beispiellink.
-3. Unter **Settings → Pages → Build and deployment → Source** wählst du **GitHub Actions**.
-4. Speichere die Dateien im Standardbranch. Der enthaltene Workflow baut und veröffentlicht die Website. Den Fortschritt findest du unter **Actions → Wiki veröffentlichen**. Ist der erste Push schon erfolgt, starte den Workflow dort über **Run workflow**.
+- `_layouts/home.html`: Hero, Manifest, Projekte, Now und Kontakt.
+- `_data/profile.yml`: Name und Interessen.
+- `_posts/`: Gedanken als Markdown-Dateien. Die Startseite zeigt die Beiträge automatisch, neueste zuerst; jeder Beitrag hat eine eigene Adresse und das Zine-Layout.
+- `assets/css/style.css`: Layout, responsive Darstellung und rote Schließen-Buttons.
+- `assets/js/main.js`: Dialoge, Farbakzente und lokaler Kontaktentwurf.
+- `assets/images/`: Poster und Augenmotiv. Die Poster sind KI-generierte Illustrationen; die Gesprächsrunde dokumentiert kein reales Treffen.
 
-Der Workflow bestimmt den Repository-Unterpfad automatisch. Für eine eigene Domain oder die Hauptdomain `name.github.io` ist deshalb kein Umbau der Links erforderlich. In `_config.yml` kannst du `url` auf die öffentliche Adresse setzen, sobald du sie kennst.
+Die drei enthaltenen Beiträge sind redaktionelle Gedankenskizzen für den Designentwurf. Sie ersetzen die bisherigen Beispieltexte. Die alten Dateinamen bleiben erhalten, die URLs werden durch `slug` im Frontmatter bestimmt.
 
-Du kannst alles direkt im GitHub-Editor pflegen. Eine lokale Ruby-Installation ist zum Schreiben und Veröffentlichen über GitHub nicht erforderlich.
+## Neuen Beitrag schreiben
 
-## Einen Beitrag schreiben
-
-Erstelle eine neue Datei in `_posts/`, zum Beispiel:
-
-```
-_posts/2026-10-26-mein-neuer-gedanke.md
-```
-
-Der Dateiname muss `JAHR-MONAT-TAG-name.md` folgen. Die Datei beginnt so:
+Eine Datei wie `_posts/2026-10-26-eine-gute-frage.md` anlegen:
 
 ```markdown
 ---
-title: "Mein neuer Gedanke"
-description: "Worum es in diesem Beitrag geht."
-tags: [Gedanken, Lernen]
+title: "Eine gute Frage"
+description: "Ein Gedanke, der noch weitergehen darf."
+category: "CURIOSITY"
 ---
 
-Hier beginnt mein Text.
-
-## Eine Zwischenüberschrift
-
-Ein weiterer Absatz mit **fetter** oder *kursiver* Schrift.
-
-> Ein Gedanke, der hervorsticht.
-
-## Ein zweiter Abschnitt
-
-Ein [Link](https://example.com) und eine Liste:
-
-- Ein Punkt
-- Noch ein Punkt
+Hier beginnt der Text. Markdown wird automatisch in das Beitragslayout gesetzt.
 ```
 
-Nach dem Speichern und dem nächsten erfolgreichen Build erscheinen der Beitrag, sein Link in der Startseitenliste und sein Inhalt in der Suche automatisch. Die Liste ist nach Datum absteigend sortiert. Titel und Datum im Artikel stammen aus der Datei; die Lesezeit wird geschätzt. Die Inhaltsverzeichnisse entstehen aus den `##`-Überschriften im Browser.
+Entwürfe in `_drafts/` bleiben unveröffentlicht. Für eine neue Homepage-Gedankenskizze genügt ein weiterer Post; die Liste wächst automatisch.
 
-Neue Beiträge verwenden ohne weitere Angabe das gemeinsame Beitragslayout. Optional: `author`, `category`, `kind` und `description`. Die mitgelieferten Beispiele sind mit `example: true` markiert; lasse das bei deinen eigenen Texten weg.
+## Lokal starten
 
-Beiträge mit einem zukünftigen Datum erscheinen erst bei einem Build nach diesem Datum. Es gibt keinen Zeitplan, der sie automatisch um Mitternacht veröffentlicht. Nutze zum gewünschten Zeitpunkt **Run workflow** oder speichere eine weitere Änderung.
-
-## Entwürfe
-
-Unter `_drafts/neuer-beitrag.md` liegt eine Vorlage. Entwürfe werden nicht veröffentlicht. Zum Veröffentlichen kopierst du den Inhalt in eine passend datierte Datei unter `_posts/`. Für eine lokale Entwurfsvorschau verwende `bundle exec jekyll serve --drafts`.
-
-## Was pflege ich wo?
-
-| Inhalt | Datei |
-|---|---|
-| Name, Initialen, E-Mail, Interessen, Steckbrief | `_data/profile.yml` |
-| Seitentitel, Beschreibung, Grundeinstellungen | `_config.yml` |
-| Navigation | `_data/navigation.yml` |
-| Projekte | `_data/projects.yml` |
-| Einleitung und Startseitentexte | `_includes/home/*.md` |
-| Blogbeiträge | `_posts/*.md` |
-| Entwurfsvorlage | `_drafts/neuer-beitrag.md` |
-| Eigenständige Über-mich-Seite | `ueber.md` |
-| Gemeinsames Design | `assets/css/style.css` |
-| Menü, Suche, Inhaltsverzeichnis, Leseeinstellungen | `assets/js/main.js` |
-| Gemeinsamer Seitenaufbau | `_layouts/default.html` |
-| Darstellung eines Beitrags | `_layouts/post.html` |
-
-Neue eigenständige Seiten legst du z.B. als `lesen.md` im obersten Verzeichnis an:
-
-```markdown
----
-title: "Meine Leseliste"
-permalink: /lesen/
----
-
-## Gerade auf meinem Tisch
-
-Dein Text …
-```
-
-Sie erhalten automatisch das Seitenlayout und erscheinen in der Suche. Für einen Eintrag im Hauptmenü ergänze `_data/navigation.yml`.
-
-## Bilder und interne Links
-
-Lege Bilder zum Beispiel unter `assets/images/` ab:
-
-```markdown
-![Beschreibung des Bildes]({{ '/assets/images/mein-bild.jpg' | relative_url }})
-```
-
-Für Links zu anderen Beiträgen ist Jekyll zuständig. Beispiel mit einer existierenden Datei:
-
-```liquid
-[Zum Beispielbeitrag]({{ site.baseurl }}{% post_url 2026-10-25-ein-eigenes-stueck-internet %})
-```
-
-Das bleibt auch auf einer Repository-Adresse wie `name.github.io/mein-wiki/` korrekt.
-
-## Lokal ansehen
-
-Benötigt Ruby (empfohlen 3.3) und Bundler. Im Projektordner:
+Ruby 3.3 und Bundler installieren, dann:
 
 ```sh
 bundle install
 bundle exec jekyll serve
 ```
 
-Öffne anschließend `http://localhost:4000`. Änderungen an Markdown und Layouts werden neu gebaut. Nach Änderungen an `_config.yml` den Vorschauprozess neu starten.
+Die Vorschau läuft unter `http://127.0.0.1:4000`. Die Seite benötigt keine externen Fonts, keine JavaScript-Pakete und kein Tracking. Alle internen und Asset-URLs berücksichtigen Jekylls `baseurl`.
 
-Eine Vorschau mit Repository-Unterpfad ist möglich:
+## Kontakt
 
-```sh
-bundle exec jekyll serve --baseurl /mein-wiki
-```
+Bis eine öffentliche Kontaktadresse feststeht, lädt der Dialog einen lokalen `.eml`-Entwurf ohne Empfänger herunter. Er sendet keine Nachrichten und speichert keine Eingaben. Es wurde keine Adresse erfunden. Den Kontakt später im Home-Layout und Kontakt-Dialog durch den gewünschten öffentlichen Kanal ersetzen.
 
-Dann öffne `http://localhost:4000/mein-wiki/`.
+## GitHub Pages
 
-**Wichtig:** Die Quelldateien lassen sich nicht mehr durch Doppelklick als fertige Website betrachten. Jekyll muss sie zunächst bauen. Die alte statische Vorlage wurde separat erhalten; sie ist kein automatisch aktualisiertes Ergebnis dieses Projekts.
+Der bestehende Workflow bleibt der Veröffentlichungsweg. Pull Requests führen nur den Jekyll-Build aus. Veröffentlichungen erfolgen ausschließlich vom Standardbranch; ein Design-Branch oder Pull Request stellt die öffentliche Seite nicht um.
 
-## Suche, Datenschutz und Menü
+Nach Prüfung und Freigabe des Designs den Branch in `main` übernehmen. Unter Repository Settings → Pages muss als Quelle GitHub Actions gewählt sein. Der Workflow baut mit Ruby 3.3 und Jekyll 3.10.
 
-Die Suche lädt `search.json`, die Jekyll aus veröffentlichten Beiträgen und Seiten erzeugt. Sie arbeitet anschließend im Browser, ohne Suchanbieter. Entwürfe und Beiträge mit `published: false` werden im normalen Build ausgelassen. Es gibt keine Tracker oder externen Schriftarten. Leseeinstellungen speichert nur der jeweilige Browser.
+## Kompatibilität
 
-Das linke Burgermenü öffnet einen nativen modalen Dialog. Es ist unabhängig von der Scrollposition, lässt sich mit Escape oder dem Schließen-Button verlassen und gibt den Tastaturfokus zurück. Das Design bleibt flach, ohne 3D-Effekte.
-
-## Dokumentation
-
-- Beiträge: https://jekyllrb.com/docs/posts/
-- Layouts: https://jekyllrb.com/docs/layouts/
-- GitHub Actions: https://jekyllrb.com/docs/continuous-integration/github-actions/
-
-## Technischer Aufbau der Suche
-
-`search.json` wird direkt durch Jekylls Vorlagensprache erzeugt, ohne eigene Plugins. Das funktioniert sowohl im GitHub-Pages-Standardbuild als auch im enthaltenen Actions-Workflow. Markdown-Beiträge und normale Markdown-Seiten erscheinen automatisch. Für Seiten, deren Text vollständig aus einer eingebundenen Datei stammt, kann `search_include: home/ueber.md` im Kopfbereich dieselbe Inhaltsdatei für die Suche verwenden. Mit `search: false` schließt du eine Seite aus.
-
-## Prüfstand dieser Lieferung
-
-- Echter Build mit Jekyll 3.10.0 erfolgreich, sowohl für `/` als auch für `/mein-wiki/`.
-- Erzeugte lokale Links, Sprungziele, Suchindex und JavaScript-Syntax geprüft.
-- Zusätzlicher Markdown-Testbeitrag ohne Layoutänderung automatisch in Liste und Suche aufgenommen.
-- Entwürfe, `published: false`, zukünftige Beiträge und die Fehlerseite aus der Suche ausgeschlossen.
-- Das lokale Prüfsystem verwendet Ruby 2.6; der mitgelieferte GitHub-Workflow ist auf Ruby 3.3 vorbereitet. Der Workflow wurde noch nicht in einem GitHub-Repository ausgeführt.
-- Visuelle Browserprüfung und Browser-Interaktionen bleiben ungeprüft, da das in dieser Sitzung vorgeschriebene Interceptor-Testprofil nicht eingerichtet ist.
+`/ueber/`, `/404.html` und der frühere Einstieg `/beitrag.html` sind an das neue Design angepasst. Die alten Beispielpost-URLs werden nicht fortgeführt. Die frühere Wiki-Navigation und Leseeinstellungen gehören nicht zum neuen Zine-Design.
