@@ -53,3 +53,11 @@ Nach Prüfung und Freigabe des Designs den Branch in `main` übernehmen. Unter R
 ## Kompatibilität
 
 `/ueber/`, `/404.html` und der frühere Einstieg `/beitrag.html` sind an das neue Design angepasst. Die alten Beispielpost-URLs werden nicht fortgeführt. Die frühere Wiki-Navigation und Leseeinstellungen gehören nicht zum neuen Zine-Design.
+
+## Zitate unter dem Hero
+
+Die drei Zitate werden aus `_data/quotes.yml` geladen. `text` und `author` sind Pflicht; `source` ist ein optionaler Quellenlink. Die beiden ergänzenden Zitate lassen sich dort jederzeit austauschen.
+
+## Quotes als Bilder
+
+`/quotes/` ist eine reduzierte Poster-Galerie. Die Poster liegen in `assets/images/quote-*.jpg`; Metadaten und Bildpfade in `_data/quotes.yml`. Für weitere Poster einen Datensatz ergänzen und in `assets/js/main.js` den zugehörigen `poster_id` in `posterAssets` aufnehmen, damit die Großansicht das Bild findet. Die Originale wurden mit dem integrierten Imagegen-Werkzeug erzeugt.

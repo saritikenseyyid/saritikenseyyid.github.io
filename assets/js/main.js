@@ -95,3 +95,9 @@ document.querySelectorAll('[data-poster]').forEach(button => button.addEventList
  document.querySelector('#poster-viewer-title').textContent=poster.title;
  const dialog=document.querySelector('#poster-viewer'); showDialog(dialog,button); dialog.scrollTop=0;
 }));
+
+Object.assign(posterAssets,{
+ "quote-rory":{src:{{ '/assets/images/quote-rory.jpg' | relative_url | jsonify }},title:"RORY SUTHERLAND / QUOTES",alt:"The opposite of a good idea, can be another good idea. — Rory Sutherland"},
+ "quote-feynman":{src:{{ '/assets/images/quote-feynman.jpg' | relative_url | jsonify }},title:"RICHARD FEYNMAN / QUOTES",alt:"What I cannot create, I do not understand. — Richard Feynman"},
+ "quote-jobs":{src:{{ '/assets/images/quote-jobs.jpg' | relative_url | jsonify }},title:"STEVE JOBS / QUOTES",alt:"You can’t connect the dots looking forward; you can only connect them looking backwards. — Steve Jobs"}
+});

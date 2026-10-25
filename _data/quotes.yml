@@ -1,0 +1,14 @@
+- text: "The opposite of a good idea, can be another good idea."
+  author: "Rory Sutherland"
+  poster_id: quote-rory
+  image: /assets/images/quote-rory.jpg
+- text: "What I cannot create, I do not understand."
+  author: "Richard Feynman"
+  poster_id: quote-feynman
+  image: /assets/images/quote-feynman.jpg
+  source: "https://magazine.caltech.edu/post/biology-through-the-eyes-of-a-physicist"
+- text: "You can’t connect the dots looking forward; you can only connect them looking backwards."
+  author: "Steve Jobs"
+  poster_id: quote-jobs
+  image: /assets/images/quote-jobs.jpg
+  source: "https://news.stanford.edu/stories/2005/06/youve-got-find-love-jobs-says"

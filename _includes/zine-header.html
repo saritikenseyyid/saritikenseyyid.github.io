@@ -2,5 +2,5 @@
 <header class="header wrap">
 <a class="wordmark" href="{{ '/' | relative_url }}#" aria-label="Seyyid, Startseite">seyyid<span>*</span></a>
 <button class="menu-toggle" aria-controls="navigation" aria-expanded="false">Menü <span>+</span></button>
-<nav id="navigation" aria-label="Hauptnavigation"><a href="{{ '/' | relative_url }}#about">About <sup>01</sup></a><a href="{{ '/' | relative_url }}#thoughts">Thoughts <sup>02</sup></a><a href="{{ '/' | relative_url }}#projects">Experiments <sup>03</sup></a><a href="{{ '/' | relative_url }}#now">Now <sup>04</sup></a><a href="{{ '/' | relative_url }}#contact">Say hello ↗</a></nav>
+<nav id="navigation" aria-label="Hauptnavigation"><a href="{{ '/' | relative_url }}#about">About <sup>01</sup></a><a href="{{ '/' | relative_url }}#thoughts">Thoughts <sup>02</sup></a><a href="{{ '/' | relative_url }}#projects">Experiments <sup>03</sup></a><a href="{{ '/' | relative_url }}#now">Now <sup>04</sup></a><a href="{{ '/quotes/' | relative_url }}"{% if page.url == '/quotes/' %} aria-current="page"{% endif %}>Quotes <sup>05</sup></a><a href="{{ '/' | relative_url }}#contact">Say hello ↗</a></nav>
 </header>
