@@ -1,4 +1,4 @@
 ---
 layout: default
 ---
-<article id="start"><header class="intro"><div class="eyebrow"><span class="dot"></span>Persönliches Wiki</div><h1>{{ page.title | escape }}</h1>{% if page.description %}<p class="lead">{{ page.description | escape }}</p>{% endif %}</header><details class="mobile-toc"><summary>Leseeinstellungen</summary><div class="settings" data-settings></div></details><div class="article-content">{{ content }}</div>{% include footer.html %}</article>
+<article class="post-shell wrap section-space"><a class="text-link" href="{{ '/' | relative_url }}">← Startseite</a><header class="post-heading"><div class="section-label mono">SEYYID / FIELD NOTES</div><h1>{{ page.title | escape }}</h1></header><div class="post-prose">{{ content }}</div></article>

@@ -1,12 +1,8 @@
-- title: Dieses persönliche Wiki
-  description: Eine eigene Heimat für Gedanken, unabhängig von Plattformen.
-  url: /#start
-  category: Digitaler Garten
-- title: Ein öffentliches Notizbuch
-  description: Kurze Texte über Gestaltung, Neugier und das Lernen unterwegs.
-  url: /#notizen
-  category: Textsammlung
-- title: Raum für das Nächste
-  description: Eine offene Stelle für eine Idee, die noch einen Anfang sucht.
-  url: /#aktuell
-  category: In Entwicklung
+- title: Dead Poets Society
+  description: Das Buch ist der Anfang. Das Gespräch bleibt.
+  category: Community / Culture
+  key: dps
+- title: Experimente ohne Schublade
+  description: Digitale Skizzen zwischen Werkzeug und Spiel.
+  category: Art / Technology / Making
+  key: lab

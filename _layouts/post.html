@@ -1,16 +1,9 @@
 ---
 layout: default
 ---
-<nav class="breadcrumb" aria-label="Brotkrumennavigation"><a href="{{ '/' | relative_url }}">Startseite</a><span aria-hidden="true">/</span><a href="{{ '/#notizen' | relative_url }}">Notizbuch</a><span aria-hidden="true">/</span><span>{{ page.kind | default: 'Notiz' | escape }}</span></nav>
-<article id="start"><header class="intro"><div class="eyebrow"><span class="dot"></span>{{ page.category | default: 'Aus dem Notizbuch' | escape }}</div>
-<h1>{{ page.title | escape }}</h1>{% if page.description %}<p class="lead">{{ page.description | escape }}</p>{% endif %}
-{% assign word_count = content | strip_html | number_of_words %}{% assign reading_minutes = word_count | plus: 199 | divided_by: 200 %}{% if reading_minutes < 1 %}{% assign reading_minutes = 1 %}{% endif %}
-<div class="article-meta"><span>Von <a href="{{ '/#ueber' | relative_url }}">{{ page.author | default: site.data.profile.name | escape }}</a></span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%d.%m.%Y' }}</time><span>{{ page.kind | default: 'Notiz' | escape }}{% if page.example %} · Beispielbeitrag{% endif %}</span><span>Ca. {{ reading_minutes }} Min. Lesezeit</span></div></header>
-<details class="mobile-toc"><summary>Leseeinstellungen</summary><div class="settings" data-settings></div></details>
-<details class="inline-toc" open><summary>In diesem Beitrag</summary><ol data-toc-list></ol></details>
-<div class="article-content">{{ content }}</div>
-{% if page.tags.size > 0 %}<div class="topic-list post-tags" aria-label="Themen">{% for tag in page.tags %}<span class="tag">{{ tag | escape }}</span>{% endfor %}</div>{% endif %}
-{% if page.example %}<div class="notice"><span aria-hidden="true">ⓘ</span><div>Dies ist ein Beispielbeitrag. Text, Autor und Datum kannst du durch deine eigenen Inhalte ersetzen.</div></div>{% endif %}
-<nav class="post-pagination" aria-label="Weitere Beiträge"><div>{% if page.previous %}<a href="{{ page.previous.url | relative_url }}"><small>← Älterer Beitrag</small>{{ page.previous.title | escape }}</a>{% endif %}</div><div>{% if page.next %}<a href="{{ page.next.url | relative_url }}"><small>Neuerer Beitrag →</small>{{ page.next.title | escape }}</a>{% endif %}</div></nav>
-<div class="article-bottom"><a href="{{ '/#notizen' | relative_url }}">← Alle Notizen</a><button id="copy-link" type="button">Beitragslink kopieren ↗</button></div><p id="copy-status" role="status" class="description"></p>
-{% include footer.html %}</article>
+<article class="post-shell wrap section-space">
+<a class="text-link" href="{{ '/#thoughts' | relative_url }}">← Zum offenen Notizbuch</a>
+<header class="post-heading"><div class="section-label mono">{{ page.category | escape }} / THINKING OUT LOUD</div><h1>{{ page.title | escape }}</h1><div class="post-meta mono"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%d.%m.%Y' }}</time> · {{ site.data.profile.name | escape }}{% if page.editorial_draft %} · GEDANKENSKIZZE{% endif %}</div></header>
+<div class="post-prose">{{ content }}</div>
+<nav class="post-navigation" aria-label="Weitere Gedanken">{% if page.previous %}<a class="text-link" href="{{ page.previous.url | relative_url }}">← {{ page.previous.title | escape }}</a>{% endif %}{% if page.next %}<a class="text-link" href="{{ page.next.url | relative_url }}">{{ page.next.title | escape }} →</a>{% endif %}</nav>
+</article>

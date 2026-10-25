@@ -1,18 +1,18 @@
 ---
-title: "Eine kleine Übung in Aufmerksamkeit"
-description: "Was passiert, wenn man genauer hinsieht."
-tags: [Alltag, Neugier]
-example: true
+layout: post
+title: "Ein gutes Gespräch ist ein kleiner Aufbruch."
+description: "Warum gemeinsame Fragen weiter tragen als gleiche Antworten."
+category: "COMMUNITY"
+slug: ein-gutes-gespraech
+editorial_draft: true
 ---
 
-## Ein zweiter Blick
+Manchmal gehe ich aus einem Gespräch und die Straße sieht ein wenig anders aus. Nichts hat sich verändert, außer der Art, wie ich auf etwas schaue.
 
-Heute eine einfache Übung: einen gewohnten Weg gehen und dabei drei Dinge finden, die bisher nicht aufgefallen sind.
+Ein gemeinsamer Text kann dafür ein guter Anlass sein. Alle haben dieselben Seiten gelesen und trotzdem etwas anderes mitgebracht. Eine Erinnerung, einen Widerspruch, einen Satz am Rand.
 
-Die Schrift an einem Hauseingang. Das Licht zwischen zwei Gebäuden. Eine Pflanze, die sich ihren Platz gesucht hat.
+Mich interessiert diese Differenz. Ein Raum, in dem man Gedanken ausprobieren darf, bevor sie fertig sind. In dem niemand besonders klug klingen muss, damit etwas Kluges entstehen kann.
 
-> Neugier braucht nicht immer etwas Neues. Manchmal nur einen zweiten Blick.
+Vielleicht beginnt Gemeinschaft mit dieser Erlaubnis: Du darfst anders denken. Du darfst etwas nicht wissen. Du darfst nachfragen.
 
-## Zurück zur eigenen Arbeit
-
-Vielleicht gilt das auch für die eigene Arbeit. Bevor ich die nächste Idee suche, könnte ich die vorhandene noch einmal genauer ansehen.
+Die offene Frage: Wie schaffen wir mehr Räume, in denen man gemeinsam neugierig sein kann?
